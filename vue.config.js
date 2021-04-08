@@ -1,3 +1,4 @@
-// module.exports = {
-//     publicPath: 'vue-movies',
-//   }
+module.exports = {
+  publicPath: '/vue-movies/',
+//   assetsDir: '/'
+};
