@@ -1,48 +1,49 @@
 <template>
-  <div id="app" class="small-container">
-    <h1>EMPLOYEES</h1>
-    <employees-form @add:employee="addEmployee" />
-    <employee-table
-      :employees="employees"
-      @delete:employee="deleteEmployee"
-      @edit:employee="editEmployee"
-    />
+  <div id="app">
+    <div class="header">
+      <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        <h3 class="pure-menu-heading">VUE MOVIES</h3>
+        <ul class="pure-menu-list">
+          <li class="pure-menu-item pure-menu">
+            <router-link to="/" class="pure-menu-link">HOME </router-link>
+          </li>
+          <li class="pure-menu-item pure-menu">
+            <router-link to="/my-movies" class="pure-menu-link"
+              >MY MOVIES</router-link
+            >
+          </li>
+          <li class="pure-menu-item pure-menu">
+            <router-link to="/about" class="pure-menu-link">ABOUT </router-link>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import EmployeesForm from "./components/EmployeesForm.vue";
-import EmployeeTable from "./components/EmployeeTable.vue";
+// import About from "./components/About.vue";
+// import EmployeesForm from "./components/EmployeesForm.vue";
+// import EmployeeTable from "./components/EmployeeTable.vue";
+// import MoviesList from "./components/MoviesList.vue";
 
 export default {
   name: "App",
   components: {
-    EmployeeTable,
-    EmployeesForm,
+    // MoviesList,
+    // About,
+    // EmployeeTable,
+    // EmployeesForm,
   },
   data() {
     return {
-      employees: [
-        {
-          id: 1,
-          name: "Richard Hendricks",
-          email: "richard@piedpiper.com",
-        },
-        {
-          id: 2,
-          name: "Bertram Gilfoyle",
-          email: "gilfoyle@piedpiper.com",
-        },
-        {
-          id: 3,
-          name: "Dinesh Chugtai",
-          email: "dinesh@piedpiper.com",
-        },
-      ],
+      employees: [],
     };
   },
   mounted() {
-    this.getEmployees();
+    // this.getEmployees();
   },
   methods: {
     async addEmployee(employee) {
@@ -105,13 +106,88 @@ export default {
 </script>
 
 <style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+  color: whitesmoke;
+}
+
+html,
+body {
+  margin: 0;
+  background-color: #2c3e50;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 30px;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #031828;
   margin-top: 60px;
+}
+
+.pure-button {
+  background-color: #1f8dd6;
+  color: white;
+  padding: 0.5em 2em;
+  border-radius: 5px;
+}
+
+a.pure-button-primary {
+  background: white;
+  color: #1f8dd6;
+  border-radius: 5px;
+  font-size: 120%;
+}
+
+.home-menu {
+  padding: 0.5em;
+  text-align: center;
+}
+.home-menu {
+  background: #031828;
+  display: flex;
+  justify-content: space-between;
+}
+.pure-menu.pure-menu-fixed {
+  border-bottom: none;
+  z-index: 999;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+  align-items: center;
+}
+
+.home-menu .pure-menu-heading {
+  color: white;
+  font-weight: 400;
+  margin: 0;
+}
+.router-link-exact-active {
+  color: whitesmoke !important;
+}
+
+.home-menu a {
+  color: #6fbef3;
+}
+
+.selected {
+  color: whitesmoke !important;
+}
+
+.home-menu li a:hover,
+.home-menu li a:focus {
+  background: none;
+  border: none;
+  color: #aecfe5;
 }
 
 button {

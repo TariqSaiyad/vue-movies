@@ -1,5 +1,7 @@
 # vue-movies
 
+Github Pages deployment at [https://tariqsaiyad.github.io/vue-movies](https://tariqsaiyad.github.io/vue-movies/)
+
 ## Project setup
 ```
 npm install
