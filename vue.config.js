@@ -1,4 +1,4 @@
-// module.exports = {
-//   publicPath: '/vue-movies/',
-// //   assetsDir: '/'
-// };
+module.exports = {
+  publicPath: '/vue-movies/',
+//   assetsDir: '/'
+};
