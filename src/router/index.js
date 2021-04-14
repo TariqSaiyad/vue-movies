@@ -10,17 +10,17 @@ export default new Router({
   mode: "history",
   routes: [
     {
-      path: "/about",
+      path: "/vue-movies/about",
       name: "About",
       component: About,
     },
     {
-      path: "/",
+      path: "/vue-movies",
       name: "MoviesList",
       component: MoviesList,
     },
     {
-      path: "/my-movies",
+      path: "/vue-movies/my-movies",
       name: "MyMovies",
       component: MyMovies,
     },

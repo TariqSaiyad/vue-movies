@@ -5,15 +5,15 @@
         <h3 class="pure-menu-heading">VUE MOVIES</h3>
         <ul class="pure-menu-list">
           <li class="pure-menu-item pure-menu">
-            <router-link to="/" class="pure-menu-link">HOME </router-link>
+            <router-link to="/vue-movies" class="pure-menu-link">HOME </router-link>
           </li>
           <li class="pure-menu-item pure-menu">
-            <router-link to="/my-movies" class="pure-menu-link"
+            <router-link to="/vue-movies/my-movies" class="pure-menu-link"
               >MY MOVIES</router-link
             >
           </li>
           <li class="pure-menu-item pure-menu">
-            <router-link to="/about" class="pure-menu-link">ABOUT </router-link>
+            <router-link to="/vue-movies/about" class="pure-menu-link">ABOUT </router-link>
           </li>
         </ul>
       </div>
